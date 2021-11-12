@@ -1,2 +1,7 @@
+/CMakeFiles
 /out
 /file_assets
+
+CMakeCache.txt
+cmake_install.cmake
+demo.exe
