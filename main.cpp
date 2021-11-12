@@ -4,8 +4,6 @@
 
 #include <windows.h>
 
-#include <boost/lambda/lambda.hpp>
-
 using namespace std;
 
 int DisplayPeripherals(){
