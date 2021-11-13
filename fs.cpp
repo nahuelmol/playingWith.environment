@@ -12,7 +12,9 @@ void get_size_file(const fs::path& s){
 	using std::string;
 	using std::cout;
 
-	cout << "File size: " << fs::file_size(s) << "\n";
+	std::uintmax_t size = fs::file_size(s);
+
+	cout << "File size: " << size << "\n";
 
 	fstream myfile;
 	string spath = s.u8string();
@@ -23,7 +25,10 @@ void get_size_file(const fs::path& s){
 		cout << "file unidentified";
 	}else{
 		cout << "file identified";
-		myfile << "\nreading from fs.cpp script\n";
+
+		if(size > 1000){
+			myfile << "\nreading from fs.cpp script\n";
+		}
 	}
 
 	myfile.close();
