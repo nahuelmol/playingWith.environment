@@ -11,11 +11,14 @@ GOTO Main
 :Fs
 ECHO ..compiling fs script
 c++ -I %BOOST_PATH% -o %OUT% fs.cpp 
+GOTO Exe
 
 :Main
 ECHO ..compiling main script
 c++ -I %BOOST_PATH% -o %OUT% main.cpp
+GOTO Exe
 
+:Exe
 ECHO ..executing 
 cd out && fs
 cd..
